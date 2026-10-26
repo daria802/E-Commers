@@ -1,0 +1,10 @@
+{
+  "description": "Offers homeowners and businesses an interactive platform to explore, customize, and purchase solar energy solutions with savings calculators and expert support.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
