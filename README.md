@@ -1,8 +1,8 @@
-# E-Commers — Voltaik ⚡
+# E-Commers — Solaflow ⚡
 
 > **Next-Generation Energy Storage & Clean Power E-Commerce Experience**
 
-Voltaik is a modern, high-performance mobile-first e-commerce web application designed for residential, prosumer, and commercial battery storage solutions. Built with a striking **neo-brutalist editorial aesthetic**, tactile micro-interactions, and an interactive energy calculation engine.
+Solaflow is a modern, high-performance mobile-first e-commerce web application designed for residential, prosumer, and commercial battery storage solutions. Built with a striking **neo-brutalist editorial aesthetic**, tactile micro-interactions, and an interactive energy calculation engine.
 
 ---
 
@@ -14,15 +14,15 @@ Voltaik is a modern, high-performance mobile-first e-commerce web application de
   - *PowerGrid 10kWh* — Prosumer solar pairing
   - *Commercial 50kWh* — Enterprise-grade independent grid
 - **💬 Layered Testimonial Deck**: Dynamic stacked card deck with interactive depth scaling and smooth transitions on click.
-- **🧭 Floating Smart Navigation**:
-  - Vertical desktop floating dock for rapid jumping between catalog, calculator, and cart.
+- **🧭 Header Smart Navigation**:
+  - Horizontal pill dock in header for rapid jumping between home, catalog, calculator, and cart.
   - Mobile bottom action pill with pulsating status indicators and quick-book triggers.
 - **📑 Modal Consultation & Slide-in Cart**:
   - Lead-generation consultation booking modal with form validation.
   - Smooth slide-out cart drawer with animated backdrop blur.
 - **🎨 Editorial Neo-Brutalist Design System**:
   - Custom palette: Cream (`#FDFBF7`), Dark Cream (`#F2EFE8`), Hyper Orange (`#FF5500`), Cobalt Blue (`#2C3FE6`), and Deep Ink (`#111111`).
-  - Dual typography: Sans-serif **Space Grotesk** paired with editorial serif **Playfair Display**.
+  - Dual typography: Modern sans-serif **Outfit** paired with editorial serif **Playfair Display**.
   - Crisp brutal borders and tactile hard drop shadows (`box-shadow: 4px 4px 0px 0px #111111`).
 
 ---
@@ -34,7 +34,7 @@ Voltaik is a modern, high-performance mobile-first e-commerce web application de
 | **Runtime & UI** | [React 19](https://react.dev/) & [TypeScript 5.7](https://www.typescriptlang.org/) |
 | **Bundler & Dev Server** | [Vite 8](https://vitejs.dev/) |
 | **Styling Engine** | [Tailwind CSS v4](https://tailwindcss.com/) (`@tailwindcss/vite`) |
-| **Typography** | [Google Fonts](https://fonts.google.com/) (*Space Grotesk* + *Playfair Display*) |
+| **Typography** | [Google Fonts](https://fonts.google.com/) (*Outfit* + *Playfair Display*) |
 | **Code Formatter** | [oxfmt](https://github.com/oxc-project/oxc) |
 
 ---

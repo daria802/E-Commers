@@ -267,18 +267,27 @@ export default function App() {
       {/* --- Main Content Wrapper --- */}
       <div className="w-full">
         {/* --- Top Bar / Header with Navigation Pill Panel --- */}
-        <header className="fixed top-0 left-0 right-0 z-30 px-6 py-4 bg-cream/90 backdrop-blur-md border-b border-ink/10">
+        <header className="fixed top-0 left-0 right-0 z-30 px-6 py-4 bg-orange text-ink border-b-2 border-ink shadow-sm">
           <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
             <div
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
               className="flex items-center gap-3 cursor-pointer shrink-0"
             >
-              <div className="w-10 h-10 bg-orange rounded-full brutal-border flex items-center justify-center">
-                <Icons.Zap size={20} className="text-white" />
+              <div className="w-11 h-11 bg-white rounded-xl brutal-border brutal-shadow flex items-center justify-center overflow-hidden p-1">
+                <img
+                  src="/solaflow-icon.jpg"
+                  alt="Solaflow Emblem"
+                  className="w-full h-full object-contain"
+                />
               </div>
-              <span className="font-bold text-xl tracking-tight uppercase">
-                Voltaic
-              </span>
+              <div className="flex flex-col">
+                <span className="font-black text-xl tracking-tight uppercase text-ink leading-none">
+                  Solaflow
+                </span>
+                <span className="text-[9px] font-bold tracking-widest uppercase text-ink/75">
+                  Solar & Efficiency
+                </span>
+              </div>
             </div>
 
             {/* --- Navigation Pill Panel --- */}
@@ -325,9 +334,9 @@ export default function App() {
 
             <div className="flex items-center gap-3 shrink-0">
               <Button
-                variant="primary"
+                variant="brutal-light"
                 onClick={() => setIsModalOpen(true)}
-                className="hidden sm:inline-flex"
+                className="hidden sm:inline-flex !rounded-full !py-2.5 !px-5"
               >
                 Get Quote <Icons.ArrowUpRight size={16} />
               </Button>
@@ -381,25 +390,6 @@ export default function App() {
                   Book a Consultation
                 </Button>
               </div>
-            </div>
-
-            {/* Orange Badge Graphic */}
-            <div className="absolute right-0 top-1/4 hidden lg:flex items-center justify-center w-40 h-40 bg-orange text-white rounded-full brutal-border brutal-shadow animate-[spin_20s_linear_infinite]">
-              <svg viewBox="0 0 100 100" width="100%" height="100%">
-                <path
-                  id="textPath"
-                  d="M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0"
-                  fill="transparent"
-                />
-                <text
-                  className="text-[12px] font-bold uppercase tracking-widest"
-                  fill="currentColor"
-                >
-                  <textPath href="#textPath" startOffset="0%">
-                    • 100% clean energy • zero emissions{" "}
-                  </textPath>
-                </text>
-              </svg>
             </div>
           </section>
 
@@ -625,15 +615,24 @@ export default function App() {
         <footer className="border-t-4 border-ink pt-16 pb-32 px-6 lg:px-12 w-full flex flex-col md:flex-row justify-between items-start gap-12 bg-cream">
           <div className="max-w-sm">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 bg-orange rounded-full brutal-border flex items-center justify-center">
-                <Icons.Zap size={20} className="text-white" />
+              <div className="w-12 h-12 bg-white rounded-xl brutal-border brutal-shadow flex items-center justify-center overflow-hidden p-1">
+                <img
+                  src="/solaflow-icon.jpg"
+                  alt="Solaflow Emblem"
+                  className="w-full h-full object-contain"
+                />
               </div>
-              <span className="font-bold text-2xl tracking-tight uppercase">
-                Voltaic
-              </span>
+              <div className="flex flex-col">
+                <span className="font-black text-2xl tracking-tight uppercase text-ink leading-none">
+                  Solaflow
+                </span>
+                <span className="text-[10px] font-bold tracking-widest uppercase text-ink/70">
+                  Solar & Efficiency
+                </span>
+              </div>
             </div>
             <p className="font-medium text-ink/70">
-              Neo-brutalist energy storage. Power your future without
+              Neo-brutalist solar and energy efficiency solutions. Power your future without
               compromising on aesthetic.
             </p>
           </div>
