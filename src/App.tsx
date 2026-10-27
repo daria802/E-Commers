@@ -263,61 +263,76 @@ export default function App() {
   }, [isModalOpen, isCartOpen])
 
   return (
-    <div className="min-h-screen flex font-sans selection:bg-orange selection:text-white">
-      {/* --- Left Vertical Floating Toolbar --- */}
-      <nav className="fixed left-4 top-1/2 -translate-y-1/2 z-40 hidden md:flex flex-col items-center gap-6 bg-white brutal-border brutal-shadow rounded-full py-6 px-3">
-        <button
-          onClick={() => window.scrollTo(0, 0)}
-          className="p-3 rounded-full hover:bg-cream-dark transition-colors text-ink"
-        >
-          <Icons.Home size={22} />
-        </button>
-        <button
-          onClick={() => document.getElementById("catalog")?.scrollIntoView()}
-          className="p-3 rounded-full hover:bg-cream-dark transition-colors text-ink"
-        >
-          <Icons.Box size={22} />
-        </button>
-        <button
-          onClick={() =>
-            document.getElementById("calculator")?.scrollIntoView()
-          }
-          className="p-3 rounded-full hover:bg-cream-dark transition-colors text-ink"
-        >
-          <Icons.Zap size={22} />
-        </button>
-        <div className="w-10 h-px bg-ink/20 my-2"></div>
-        <button
-          onClick={() => setIsCartOpen(true)}
-          className="p-3 rounded-full hover:bg-cream-dark transition-colors text-ink relative"
-        >
-          <Icons.Cart size={22} />
-          <span className="absolute top-2 right-2 w-2.5 h-2.5 bg-orange rounded-full border-2 border-white"></span>
-        </button>
-      </nav>
-
+    <div className="min-h-screen font-sans selection:bg-orange selection:text-white">
       {/* --- Main Content Wrapper --- */}
-      <div className="flex-1 md:ml-24 w-full">
-        {/* --- Top Bar --- */}
-        <header className="fixed top-0 right-0 left-0 md:left-24 z-30 flex items-center justify-between p-6 bg-cream/90 backdrop-blur-md">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-orange rounded-full brutal-border flex items-center justify-center">
-              <Icons.Zap size={20} className="text-white" />
+      <div className="w-full">
+        {/* --- Top Bar / Header with Navigation Pill Panel --- */}
+        <header className="fixed top-0 left-0 right-0 z-30 px-6 py-4 bg-cream/90 backdrop-blur-md border-b border-ink/10">
+          <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
+            <div
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              className="flex items-center gap-3 cursor-pointer shrink-0"
+            >
+              <div className="w-10 h-10 bg-orange rounded-full brutal-border flex items-center justify-center">
+                <Icons.Zap size={20} className="text-white" />
+              </div>
+              <span className="font-bold text-xl tracking-tight uppercase">
+                Voltaic
+              </span>
             </div>
-            <span className="font-bold text-xl tracking-tight uppercase">
-              Voltaic
-            </span>
+
+            {/* --- Navigation Pill Panel --- */}
+            <nav className="flex items-center gap-1 sm:gap-2 bg-white brutal-border brutal-shadow rounded-full py-1.5 px-3">
+              <button
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                className="p-2 sm:p-2.5 rounded-full hover:bg-cream-dark transition-colors text-ink"
+                title="Home"
+              >
+                <Icons.Home size={20} />
+              </button>
+              <button
+                onClick={() =>
+                  document
+                    .getElementById("catalog")
+                    ?.scrollIntoView({ behavior: "smooth" })
+                }
+                className="p-2 sm:p-2.5 rounded-full hover:bg-cream-dark transition-colors text-ink"
+                title="Lineup"
+              >
+                <Icons.Box size={20} />
+              </button>
+              <button
+                onClick={() =>
+                  document
+                    .getElementById("calculator")
+                    ?.scrollIntoView({ behavior: "smooth" })
+                }
+                className="p-2 sm:p-2.5 rounded-full hover:bg-cream-dark transition-colors text-ink"
+                title="Calculator"
+              >
+                <Icons.Zap size={20} />
+              </button>
+              <div className="w-px h-5 bg-ink/20 my-auto mx-1"></div>
+              <button
+                onClick={() => setIsCartOpen(true)}
+                className="p-2 sm:p-2.5 rounded-full hover:bg-cream-dark transition-colors text-ink relative"
+                title="Cart"
+              >
+                <Icons.Cart size={20} />
+                <span className="absolute top-1.5 right-1.5 w-2.5 h-2.5 bg-orange rounded-full border-2 border-white"></span>
+              </button>
+            </nav>
+
+            <div className="flex items-center gap-3 shrink-0">
+              <Button
+                variant="primary"
+                onClick={() => setIsModalOpen(true)}
+                className="hidden sm:inline-flex"
+              >
+                Get Quote <Icons.ArrowUpRight size={16} />
+              </Button>
+            </div>
           </div>
-          <Button
-            variant="primary"
-            onClick={() => setIsModalOpen(true)}
-            className="hidden sm:inline-flex"
-          >
-            Get Quote <Icons.ArrowUpRight size={16} />
-          </Button>
-          <button onClick={() => setIsCartOpen(true)} className="sm:hidden p-2">
-            <Icons.Cart size={24} />
-          </button>
         </header>
 
         <main className="pt-32 pb-40 px-6 max-w-7xl mx-auto overflow-hidden">
